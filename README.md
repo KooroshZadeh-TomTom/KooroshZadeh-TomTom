@@ -51,7 +51,10 @@
 
 ###
 
-## <img src="https://cdn.brandfetch.io/idSc-elqPq/theme/dark/idcrCa0hO1.svg?c=1bxid64Mup7aczewSAYMX&t=1679026244974" alt="TomTom logo" height="28" style="vertical-align:middle; margin-right:8px;" />My TomTom Story</h2>
+<h2>
+  <img src="https://cdn.brandfetch.io/idSc-elqPq/theme/dark/idcrCa0hO1.svg?c=1bxid64Mup7aczewSAYMX&t=1679026244974" alt="TomTom logo" height="30"> <sup>My TomTom Story</sup>
+</h2>
+
 
 I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because
 
