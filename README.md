@@ -56,7 +56,7 @@
 </h2>
 
 
-I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because
+I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because of innovation
 
 ---
 
