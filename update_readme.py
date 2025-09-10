@@ -14,14 +14,19 @@ from datetime import datetime
 
 def extract_current_sentence(readme_content):
     """Extract the current sentence that needs to be extended"""
-    pattern = r"I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because[^.\n]*"
+    human_pattern = r"\*\*I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because\*\*"
     
-    match = re.search(pattern, readme_content)
-    if match:
-        return match.group(0).strip()
+    ai_pattern = r"> \*🤖 AI continues the story daily:\*\s*\n> \*\*(.*?)\*\*"
+    
+    ai_match = re.search(ai_pattern, readme_content, re.DOTALL)
+    
+    base_sentence = "I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because"
+    
+    if ai_match and ai_match.group(1).strip():
+        ai_content = ai_match.group(1).strip()
+        return f"{base_sentence} {ai_content}"
     else:
-        # Return the base sentence if no match found
-        return "I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because"
+        return base_sentence
 
 
 def get_word_extension(current_sentence, api_key):
@@ -84,15 +89,26 @@ def update_readme(readme_path, current_sentence, new_words):
     with open(readme_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    new_sentence = f"{current_sentence} {new_words}"
+    # Extract just the AI part (everything after "because")
+    base_sentence = "I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because"
     
-    pattern = r"I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because[^.\n]*"
-    new_content = re.sub(pattern, new_sentence, content)
+    if current_sentence.startswith(base_sentence):
+        current_ai_part = current_sentence[len(base_sentence):].strip()
+        new_ai_part = f"{current_ai_part} {new_words}".strip()
+    else:
+        new_ai_part = new_words
+    
+    ai_pattern = r"(> \*🤖 AI continues the story daily:\*\s*\n> \*\*)(.*?)(\*\*)"
+    
+    def replacement(match):
+        return f"{match.group(1)}{new_ai_part}{match.group(3)}"
+    
+    new_content = re.sub(ai_pattern, replacement, content, flags=re.DOTALL)
     
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    return new_sentence
+    return f"{base_sentence} {new_ai_part}"
 
 
 def main():

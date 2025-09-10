@@ -55,8 +55,11 @@
   <img src="https://cdn.brandfetch.io/idSc-elqPq/theme/dark/idcrCa0hO1.svg?c=1bxid64Mup7aczewSAYMX&t=1679026244974" alt="TomTom logo" height="30"> <sup>My TomTom Story</sup>
 </h2>
 
+> **🖋️ Written by me:**  
+> **I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because**
 
-I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because of innovation
+> *🤖 AI continues the story daily:*  
+> **of innovation**
 
 ---
 
