@@ -59,7 +59,7 @@
 > **I'm Koorosh, a Data Engineering Intern in TomTom's MAAP team, and I've been amazed by this company since the day I joined because**
 
 > *🤖 AI continues the story daily:*  
-> **of innovation and collaboration across teams**
+> **of innovation and collaboration across teams that fosters**
 
 ---
 
