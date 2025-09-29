@@ -3,7 +3,7 @@
 ###
 
 <h6 align="left">
-  Data Science & Artificial Intelligence student at Leiden University, passionate about open-source projects and contributing to collaborative environments with hands-on experience in data engineering, machine learning, and cloud solutions. I enjoy working on real-world problems, from building large-scale data pipelines to developing AI models that create measurable impact. Experienced with Python, Scala, Apache Spark, Azure Databricks, AWS, and Data Analysis. Eager to keep learning and applying AI to real-world challenges, especially in data-driven industries.</h6>
+  Data Engineering Intern in the MAAP Team of the Map Quality and Insights Department.</h6>
   
 ###
 
